@@ -2,6 +2,15 @@
 var http = require('http');
 // fs module allows us to read and write content for responses!!
 var fs = require('fs');
+
+var m = require('./node_modules/mathlib');
+var m2 = require('./node_modules/mathlibfun')();
+
+console.log(m.add(5,6));
+console.log(m2.multiply(5,6));
+
+
+
 // creating a server using http module:
 var server = http.createServer(function (request, response){
     // see what URL the clients are requesting:
